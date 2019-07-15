@@ -1,0 +1,25 @@
+<form name="formHolder.user" id="formHolder.user">
+  <label> Stock Number</label>
+  <input type="text" name="stock_id" class='form-control' ng-model="user.stock_id" ng-class="{'has-error': formHolder.user.stock_id.$touched && formHolder.user.stock_id.$invalid}" required>
+  <span class="text-danger" ng-show="formHolder.user.stock_id.$touched && formHolder.user.stock_id.$invalid">Stock Number is required</span>
+
+  <br><br>
+  <label> Brand Name</label>
+  <input type="text" name="brandname" class='form-control' ng-model="user.brandname " ng-class="{'has-error': formHolder.user.brandname.$touched && formHolder.user.brandname.$invalid}" required>
+  <span class="text-danger" ng-show="formHolder.user.brandname.$touched && formHolder.user.brandname.$invalid">Brand Name is required</span>
+
+  <br><br>
+  <label> Description </label>
+  <input type="text" name="description" class='form-control' ng-model="user.description " ng-class="{'has-error': formHolder.user.description.$touched && formHolder.user.description.$invalid}" required>
+  <span class="text-danger" ng-show="formHolder.user.description.$touched && formHolder.user.description .$invalid">Description is required</span>
+  <br><br>
+  <label>Color</label>
+  <input type="text" name="color" class='form-control' ng-model="user.color" ng-class="{'has-error': formHolder.user.color.$touched && formHolder.user.color.$invalid}" required>
+  <span class="text-danger" ng-show="formHolder.user.color.$touched && formHolder.user.color.$invalid">Color is required</span>
+
+
+</form>
+
+<br>
+<button class="btn btn-primary" ng-click="manageUsers.save(this)">Save</button>
+<button class="btn btn-primary" ng-click="manageUsers.list(this)">{{btns.cancel.label}}</button>

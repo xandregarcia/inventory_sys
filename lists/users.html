@@ -1,0 +1,24 @@
+<div class="panel-body">
+<table class="table table-box" id="tablecontain">
+        
+  <thead>
+	<tr>
+	  <th>Stock ID</th>
+	  <th>Brand Name</th>
+	  <th>Description</th>
+	  <th>Color</th>
+	</tr>
+  </thead>
+  <tbody>
+    <label>Search:</label> <input class='form-control' type="text" ng-model="search" placeholder="hanapin">
+	<tr ng-repeat="u in users | filter: search">
+	  <td>{{u.stock_id}}</td>
+	  <td>{{u.brandname}}</td>
+	  <td>{{u.description}}</td>
+	  <td>{{u.color}}</td>
+      <td><button class="btn btn-primary" ng-click='manageUsers.user(this,u)'>EDIT</button>
+          <button class="btn btn-danger" ng-click='manageUsers.delete(this,u)' style="margin-left: 5px;">DELETE</button></td>
+	</tr>
+  </tbody>
+</table>
+</div>
