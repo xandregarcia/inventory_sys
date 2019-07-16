@@ -2,7 +2,7 @@
 
 session_start();
 
-if (isset($_SESSION['employee_id'])) unset($_SESSION['employee_id']);
+if (isset($_SESSION['id'])) unset($_SESSION['id']);
 
 echo "Logout Successful";
 

@@ -1,4 +1,4 @@
-angular.module('account-module',['bootstrap-growl','bootstrap-modal','form-validator']).factory('test_users', function($http,$timeout,$compile,growl,validate,bootstrapModal){
+angular.module('user-module',['bootstrap-growl','bootstrap-modal','form-validator']).factory('test_users', function($http,$timeout,$compile,growl,validate,bootstrapModal){
 
 	function test_users(){			// The main function of your controller.
 
@@ -23,10 +23,6 @@ angular.module('account-module',['bootstrap-growl','bootstrap-modal','form-valid
 					label: 'Cancel'
 				}
 			};
-
-            self.list(scope);
-            
-		
 				
 		};
 		

@@ -1,4 +1,4 @@
-var app = angular.module('dashboard',['toggle-fullscreen','account-module']);
+var app = angular.module('dashboard',['toggle-fullscreen','account-module','dashboard-module']);
 
 app.controller('dashboardCtrl',function($scope,fullscreen,test_users) {
     

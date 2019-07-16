@@ -13,17 +13,17 @@
 
         <!--Morris Chart CSS -->
          <link rel="stylesheet" href="assets/plugins/morris/morris.css">
-         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+         <!--Datatables-->
+         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
 
 
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
-      
-       
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,9 +33,16 @@
         <![endif]-->
 
         <script src="assets/js/modernizr.min.js"></script>
+
+        <style type="text/css">
+        .img-circle {
+			width: 40px;			
+		}
+		
+		</style>
     </head>
 
-    <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
+    <body class="fixed-left" ng-app="users" ng-controller="usersCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -103,7 +110,7 @@
                         	<li class="text-muted menu-title">Navigation</li>
 							<li class="has_sub">
                                 <li><a href="index.php" class="waves-effect active"><i class="ti-home"></i><span> Dashboard </span></a></li>
-                                <li><a class="waves-effect active" ng-click="manageUsers.user(this,null)" ng-disabled="btns.add" ><i class="ti-file"></i><span> Add Product </span></a></li>
+                                <li><a class="waves-effect active" ng-click="test_users.user(this,null)" ng-disabled="btns.add" ><i class="ti-file"></i><span> Add Product </span></a></li>
                                  </ul>
                             </li>
                         </ul>
@@ -143,9 +150,9 @@
                     </div> <!-- container -->
                 </div> <!-- content -->
 
-                <footer class="footer text-right">
-                   Copyright &copy; <?php echo date("Y"); ?>
-                </footer>
+                <!-- <footer class="footer text-right">
+                   Copyright &copy;
+                </footer> -->
 
             </div>
 
@@ -199,12 +206,13 @@
         <script src="angular/ui-bootstrap-tpls-3.0.2.min.js"></script>
         <script src="angular/modules/validation/validate.js"></script>
 
-        
+       
         <script src="modules/growl.js"></script>
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
-		<script src="modules/users.js"></script>
-		<script src="controllers/dashboard.js"></script>
+        <script src="modules/account.js"></script>
+        <script src="modules/users.js"></script>
+		<script src="controllers/users-inventory.js"></script>
 
 
 
