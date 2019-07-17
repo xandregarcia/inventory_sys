@@ -1,24 +1,65 @@
-<div class="panel-body">
-<table class="table table-box" id="tablecontain">
-        
-  <thead>
-	<tr>
-	  <th>Stock ID</th>
-	  <th>Brand Name</th>
-	  <th>Description</th>
-	  <th>Color</th>
-	</tr>
-  </thead>
-  <tbody>
-    <label>Search:</label> <input class='form-control' type="text" ng-model="search" placeholder="hanapin">
-	<tr ng-repeat="u in users | filter: search">
-	  <td>{{u.stock_id}}</td>
-	  <td>{{u.brandname}}</td>
-	  <td>{{u.description}}</td>
-	  <td>{{u.color}}</td>
-      <td><button class="btn btn-primary" ng-click='test_users.user(this,u)'>EDIT</button>
-          <button class="btn btn-danger" ng-click='test_users.delete(this,u)' style="margin-left: 5px;">DELETE</button></td>
-	</tr>
-  </tbody>
-</table>
+
+   <div class="panel panel-border panel-primary">
+     <br>
+    <div id="datatable-editable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-striped dataTable no-footer" id="datatable-editable" role="grid" aria-describedby="datatable-editable_info">
+        <thead>
+            <tr role="row">
+                <th class="sorting" tabindex="0" aria-controls="datatable-editable" rowspan="1" colspan="1" style="width: 208px;">Stock ID</th>
+                <th class="sorting" tabindex="0" aria-controls="datatable-editable" rowspan="1" colspan="1" style="width: 262px;">Brand Name</th>
+                <th class="sorting_desc" tabindex="0" aria-controls="datatable-editable" rowspan="1" colspan="1" style="width: 231px;">Description</th>
+                <th class="sorting_desc" tabindex="0" aria-controls="datatable-editable" rowspan="1" colspan="1" style="width: 231px;">Color</th>
+                <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 101px;">Actions</th></tr>
+        </thead>
+        <tbody>
+            
+        <tr ng-repeat =" u in users">
+                <td>{{u.stock_id}}</td>
+                <td>{{u.brandname}}</td>
+                <td>{{u.description}}</td>
+                <td>{{u.color}}</td>
+                <td class="actions">
+                    <a ng-click='test_users.user(this,u)'class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+                    <a ng-click='test_users.delete(this,u)'class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+                </td>
+            
+            </tr></tbody>
+    </table id="sample">
+</div></div>
+
 </div>
+<!--
+<div class="panel panel-border panel-primary">
+  <br>
+   
+        <div class="panel-body">
+            <table id="sample" class="table table-striped m-0">
+              <thead>
+                <tr>
+                    <th>Stock ID</th>
+                    <th>Brand Name</th>
+                    <th>Description</th>
+                    <th>Color</th>
+                    <th>Action</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="u in users ">
+                    <td>{{u.stock_id}}</td>
+                    <td>{{u.brandname}}</td>
+                    <td>{{u.description}}</td>
+                    <td>{{u.color}}</td>
+        <td>
+                <a ng-click='test_users.user(this,u)'class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+                <a ng-click='test_users.delete(this,u)'class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+        </td>
+	            </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+-->

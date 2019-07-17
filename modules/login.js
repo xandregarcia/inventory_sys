@@ -12,10 +12,10 @@ angular.module('login-module', []).service('loginService', function($http, $wind
 		}).then(function mySucces(response) {
 
 			if (response.data['login']) {
-				scope.views.incorrect = true;
+				scope.views.incorrect = false;
 				$window.location.href = 'index.php';
 			} else {
-				scope.views.incorrect = false;
+				scope.views.incorrect = true;
 			}
 			
 		},

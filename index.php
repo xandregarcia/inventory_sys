@@ -214,7 +214,5 @@
         <script src="modules/users.js"></script>
 		<script src="controllers/users-inventory.js"></script>
 
-
-
     </body>
 </html>

@@ -23,14 +23,13 @@ angular.module('user-module',['bootstrap-growl','bootstrap-modal','form-validato
 					label: 'Cancel'
 				}
 			};
-				
 		};
 		
 		self.list = function(scope) {
 
 			if (scope.$id>2) scope = scope.$parent;	
 
-			$('#content').html('Loading...');			
+				
 
 			scope.btns.add = false;
 			scope.btns.cancel.label = 'Cancel';
@@ -42,25 +41,21 @@ angular.module('user-module',['bootstrap-growl','bootstrap-modal','form-validato
 				
 				scope.users = res.data;	// Saves fetched data to the object.
 				
-				$('#content').load('lists/users.html', function() {
-					
-					$compile($('#content')[0])(scope);
-                        
-					//instantiate datable
-					$timeout(function() {
-				        $('#tablecontain').dataTable({
-							"ordering": true,
-                         "processing": true
-                            
-
-						});	
-					 },500);					
-					
-				});				
-				
 			}, function error(res){
 				
-			});	
+			});
+			
+			$('#content').html('Loading...');	
+			$('#content').load('lists/users.html', function() {
+				$timeout(function() { $compile($('#content')[0])(scope); },100);								
+				// instantiate datable
+				$timeout(function() {
+					$('#sample').DataTable({
+						"ordering": false
+					});	
+				},200);
+				
+			});
 
 		};		
 		self.save = function(scope){
