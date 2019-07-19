@@ -1,0 +1,32 @@
+<div class="panel panel-border panel-primary">
+        <br>
+        <div id="datatable-editable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+              <div class="panel-body">
+                  <table id="proc" class="table table-striped m-0">
+                    <thead>
+                      <tr role="row">
+                          <th>Stock ID</th>
+                          <th>Brand Name</th>
+                          <th>Unit Price</th>
+                          <th>Quantity </th>
+                          <th> Price</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="u in users " class="gradeC odd" role="row">
+                          <td>{{u.stock_id}}</td>
+                          <td>{{u.brandname}}</td>
+                          <td>{{u.unitprice}}</td>
+                          <td>{{u.quantity}}</td>
+                      <td class="actions">
+                      <a class="on-default edit-row" ng-click='javascript:;'><i class="ion-android-add"><span><label> Add to Cart</label></span></i></a>
+                      </td>
+                      
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+              </div>
+          </div>
+          
