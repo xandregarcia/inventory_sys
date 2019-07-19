@@ -1,0 +1,4 @@
+var new_app = angular.module("",[]);
+	new_app.angular.module("", function($scope){
+	
+	})
